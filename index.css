@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: #f5f5f5;
+}
+nav{
+    background: rgb(56,112,192);
+    background: linear-gradient(180deg, rgba(56,112,192,1) 29%, rgba(224,224,224,1) 70%, rgba(245,245,245,1) 87%);
+}
+.navb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul img{
+    width: 85px;
+}
+ul li{
+    list-style-type: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.list{
+    display: flex;
+    gap: 70px;
+    align-items: center;
+}
+.dashboard{
+    margin-right: 100px;
+}
+ul li:hover{
+    scale: 1.1;
+}
+.quiz{
+    border: red 1px solid;
+    line-height: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+}
+.quiz img{
+    width: 270px;
+    border-radius: 8px;
+    height: 180px;
+}
+button{
+    border: 1px solid rgb(255, 74, 74);
+    background-color: #ffe3f9;
+    color: black;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.quizes{
+    display: flex;
+    justify-content: space-evenly;
+}
+.quiz1{
+    margin: 50px 0;
+}
+.btn{
+    transition: 0.4s;
+    margin: 10px;
+}
+.btn:hover{
+    scale: 1.1;
+    color: red;
+    border: red 1px solid;
+}
+.Facile{
+    color: rgb(0, 226, 8);
+}
+.moyenne{
+    color: rgb(255, 90, 30);
+}
+.Deficile{
+    color: red;
+}
