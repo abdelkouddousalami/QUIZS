@@ -101,3 +101,85 @@ li span{
     background-color: rgb(69, 69, 248);
     border-radius: 10px;
 }
+/* Tablet view */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .firstquiz {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .listans li {
+        width: 90%;
+    }
+
+    .qus img {
+        width: 90%;
+    }
+
+    .scr {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .prt {
+        width: 90%;
+    }
+
+    .btn2 {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+    nav ul.navb {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .firstquiz, .scr {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .listans li {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .qus img {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .scr div .sd {
+        margin-left: 0;
+    }
+
+    .info p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn2 {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .prt, .tim {
+        width: 100%;
+    }
+}

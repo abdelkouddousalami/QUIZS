@@ -87,3 +87,73 @@ button{
 .Deficile{
     color: red;
 }
+/* Tablet view */
+@media (max-width: 768px) {
+    .navb {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .list {
+        gap: 20px;
+    }
+
+    .dashboard {
+        margin-right: 0;
+    }
+
+    .quizes {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .quiz {
+        width: 45%;
+        margin: 10px;
+    }
+
+    .quiz img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+    .navb {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .list {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .dashboard {
+        margin: 0;
+    }
+
+    .quizes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quiz {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .quiz img {
+        width: 100%;
+        height: auto;
+    }
+
+    button {
+        width: 80px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
