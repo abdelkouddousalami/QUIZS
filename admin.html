@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Administrateur - Gestion des Quiz</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navb">
+                <ul>
+                    <li><img src="images/logo2-removebg-preview.png" alt=""></li>
+                </ul>
+                <ul class="list">
+                    <a href="index.html"><li class="Home">Home</li></a>
+                    <a href="score.html"><li>Score</li></a>
+                </ul>
+                <ul>
+                    <li class="dashboard">Log As</li>
+                </ul>
+            </ul>
+        </nav>
+    </header>
+  <div class="admin-dashboard">
+    <h1>Gestion des Quiz</h1>
+    
+    <h2 id="question-form-title">Ajouter des Questions</h2>
+<form id="question-form">
+  <label for="question-text">Question</label>
+  <input type="text" id="question-text" name="question-text" required>
+
+  <label for="question-type">Type de Question</label>
+  <select id="question-type" name="question-type" required>
+    <option value="multiple-choice">Choix Multiple</option>
+    <option value="true-false">Vrai/Faux</option>
+    <option value="text">Texte</option>
+  </select>
+
+  <div id="options-container">
+    <label for="option-1">Option 1</label>
+    <input type="text" id="option-1" name="option-1">
+    <label for="option-2">Option 2</label>
+    <input type="text" id="option-2" name="option-2">
+    <label for="option-3">Option 3</label>
+    <input type="text" id="option-3" name="option-3">
+    <label for="option-4">Option 4</label>
+    <input type="text" id="option-4" name="option-4">
+  </div>
+
+  <label for="correct-answer">Réponse Correcte</label>
+  <input type="text" id="correct-answer" name="correct-answer" required>
+
+  <button type="submit">Ajouter Question</button>
+</form>
+
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

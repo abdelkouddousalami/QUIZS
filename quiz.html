@@ -16,7 +16,7 @@
                 </ul>
                 <ul class="list">
                     <a href="index.html"><li class="Home">Home</li></a>
-                    <li>Score</li>
+                    <a href="score.html"><li>Score</li></a>
                 </ul>
                 <ul>
                 <li class="dashboard">Log As</li>
@@ -25,58 +25,40 @@
         </nav>
     </header>
     <main>
-        
         <section class="firstquiz">
             <div class="tel">
-                <h1>Lorem ipsum dolor sit amet ?</h1>
+                <h1 class="qst">Question will appear here</h1>
             </div>
             <div class="qus">
                 <img src="images/px1.jpg" alt="">
             </div>
             <div class="answers">
+                <div class="text-input-container" style="display: none;">
+                    <input type="text" id="text-answer" placeholder="Write your answer here..." />
+                </div>                
                 <ul class="listans">
-                    <li>
-                        <span>A</span>
-                        <p>Lorem, ipsum dolor.</p>
-                    </li>
-                    <li>
-                        <span>B</span>
-                        <p>Lorem, ipsum dolor.</p>
-                    </li>
-                    <li>
-                        <span>C</span>
-                        <p>Lorem, ipsum dolor.</p>
-                    </li>
-                    <li>
-                        <span>D</span>
-                        <p>Lorem, ipsum dolor.</p>
-                    </li>
+                    <li class="answer-item"><span>A</span> <p class="answrs">Answer 1</p></li>
+                    <li class="answer-item"><span>B</span> <p class="answrs">Answer 2</p></li>
+                    <li class="answer-item"><span>C</span> <p class="answrs">Answer 3</p></li>
+                    <li class="answer-item"><span>D</span> <p class="answrs">Answer 4</p></li>
                 </ul>
             </div>
         </section>
         <section class="scr">
             <div class="nmb">
-                <h1>Qustion : </h1>
-                <h1> 1/10 </h1>
+                <h1>Question:</h1>
+                <h1 class="question-count">1/5</h1>
             </div>
             <div>
-                <h1>Score : </h1>
-                <p class="sd">10 ppt</p>
+                <h1>Score:</h1>
+                <p class="sd">0 pts</p>
             </div>
-            <div>
-                <h1>Time : </h1>
-                <div class="prt">
-                    <div class="tim">
-                    </div>
-                </div>
-            </div>
-            <div class="info">
-                <h1>Details : </h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <div id="progress-container" style="width: 100%; background-color: #e0e0e0; border-radius: 5px;">
+                <div id="progress-bar" style="width: 0%; height: 20px; background-color: #4caf50; border-radius: 5px;"></div>
             </div>
             <button class="btn2">Next</button>
         </section>
     </main>
-    
+    <script src="quiz.js"></script>
 </body>
 </html>

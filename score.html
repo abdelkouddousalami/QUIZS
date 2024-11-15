@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Page</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="score.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navb">
+                <ul>
+                    <li><img src="images/logo2-removebg-preview.png" alt=""></li>
+                </ul>
+                <ul class="list">
+                    <a href="index.html"><li class="Home">Home</li></a>
+                    <a href="score.html"><li>Score</li></a>
+                </ul>
+                <ul>
+                <li class="dashboard">Log As</li>
+                </ul>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="score-container">
+        <h1>Quiz Completed!</h1>
+        <p>Congratulations <span id="user-name"></span>,</p>
+        <p>Your final score is: <span id="user-score"></span></p>
+        <button onclick="window.location.href='index.html'">Home</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

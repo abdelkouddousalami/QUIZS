@@ -1,57 +1,69 @@
-*{
+* {
     margin: 0;
     text-decoration: none;
 }
-body{
+
+body {
     background-color: #f5f5f5;
 }
-nav{
-    background: rgb(56,112,192);
-    background: linear-gradient(180deg, rgba(56,112,192,1) 29%, rgba(224,224,224,1) 70%, rgba(245,245,245,1) 87%);
+
+nav {
+    background: rgb(56, 112, 192);
+    background: linear-gradient(180deg, rgba(56, 112, 192, 1) 29%, rgba(224, 224, 224, 1) 70%, rgba(245, 245, 245, 1) 87%);
 }
-.Home{
+
+.Home {
     color: white;
 }
-.navb{
+
+.navb {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-ul img{
+
+ul img {
     width: 85px;
 }
-ul li{
+
+ul li {
     list-style-type: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     transition: 0.3s;
     cursor: pointer;
 }
-.list{
+
+.list {
     display: flex;
     gap: 70px;
     align-items: center;
 }
-.dashboard{
+
+.dashboard {
     margin-right: 100px;
 }
-ul li:hover{
+
+ul li:hover {
     scale: 1.1;
 }
-.quiz{
-    border: red 1px solid;
+
+.quiz {
+    border: blue 1px solid;
     line-height: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 4px;
 }
-.quiz img{
+
+.quiz img {
     width: 270px;
-    border-radius: 8px;
+    border-radius: 4px;
     height: 180px;
 }
-button{
+
+button {
     border: 1px solid rgb(255, 74, 74);
     background-color: #ffe3f9;
     color: black;
@@ -62,32 +74,60 @@ button{
     border-radius: 5px;
     cursor: pointer;
 }
-.quizes{
+
+.quizes {
     display: flex;
     justify-content: space-evenly;
 }
-.quiz1{
+
+.quiz1 {
     margin: 50px 0;
 }
-.btn{
+
+.admp {
+    width: 200px;
+    height: 150px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    margin-left: 1300px;
+    line-height: 50px;
+    border-radius: 15px;
+    display: none;
+}
+
+.admp h3 {
+    padding-top: 8%;
+    margin-left: 20%;
+    color: cadetblue;
+    transition: 1s;
+    cursor: pointer;
+}
+.admp h3:hover{
+    scale: 1.1;
+}
+
+.btn {
     transition: 0.4s;
     margin: 10px;
 }
-.btn:hover{
+
+.btn:hover {
     scale: 1.1;
     color: red;
     border: red 1px solid;
 }
-.Facile{
+
+.Facile {
     color: rgb(0, 226, 8);
 }
-.moyenne{
+
+.moyenne {
     color: rgb(255, 90, 30);
 }
-.Deficile{
+
+.Deficile {
     color: red;
 }
-/* Tablet view */
+
 @media (max-width: 768px) {
     .navb {
         flex-direction: column;

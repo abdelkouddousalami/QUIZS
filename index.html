@@ -15,15 +15,21 @@
                 </ul>
                 <ul class="list">
                     <a href="index.html"><li class="Home">Home</li></a>
-                    <li>Score</li>
+                    <a href="score.html"><li>Score</li></a>
                 </ul>
                 <ul>
-                <li class="dashboard">Log As</li>
+                <li class="dashboard" onclick="view()" ondblclick="remv()">Log As</li>
                 </ul>
             </ul>
         </nav>
     </header>
     <main>
+        <section class="admin">
+            <div class="admp">
+                <a href="admin.html"><h3>Admin</h3></a>
+                <h3>User</h3>
+            </div>
+        </section>
         <section class="quiz1">
             <div class="quizes">
                 <div class="quiz">
@@ -31,28 +37,28 @@
                     <h1>HTML basics</h1>
                     <h3 class="Facile">Niveau : Facile</h3>
                     <p>duree : 1min</p>
-                    <a href="quiz.html"><button class="btn">Play now</button></a>
+                    <a href="quiz.html" id="play-btn"><button class="btn" data-quiz="Quest">Play now</button></a>
                 </div>
                 <div class="quiz">
                     <img src="images/px1.jpg" alt="">
                     <h1>HTML Advanced</h1>
                     <h3 class="moyenne">Niveau : Moyenne</h3>
                     <p>duree : 1min</p>
-                    <a href="quiz.html"><button class="btn">Play now</button></a>
+                    <a href="quiz.html"><button class="btn" data-quiz="Quest1">Play now</button></a>
                 </div>
                 <div class="quiz">
                     <img src="images/px1.jpg" alt="">
                     <h1>CSS</h1>
                     <h3 class="Facile">Niveau : Facile</h3>
                     <p>duree : 1min</p>
-                    <a href="quiz.html"><button class="btn">Play now</button></a>
+                    <a href="quiz.html"><button class="btn" data-quiz="Quest2">Play now</button></a>
                 </div>
                 <div class="quiz">
                     <img src="images/px1.jpg" alt="">
                     <h1>CSS Advanced</h1>
                     <h3 class="Deficile">Niveau : Deficile</h3>
                     <p>duree : 1min</p>
-                    <a href="quiz.html"><button class="btn">Play now</button></a>
+                    <a href="quiz.html"><button class="btn" data-quiz="Quest3">Play now</button></a>
                 </div>
             </div>
         </section>
@@ -63,31 +69,37 @@
                     <h1>JAVA</h1>
                     <h3 class="moyenne">Niveau : Moyenne</h3>
                     <p>duree : 1min</p>
-                    <a href="quiz.html"><button class="btn">Play now</button></a>
+                    <a href="quiz.html"><button class="btn" data-quiz="Quest4">Play now</button></a>
                 </div>
                 <div class="quiz">
                     <img src="images/px1.jpg" alt="">
                     <h1>JAVASCRIPT</h1>
                     <h3 class="Facile">Niveau : Facile</h3>
                     <p>duree : 1min</p>
-                    <a href="quiz.html"><button class="btn">Play now</button></a>
+                    <a href="quiz.html"><button class="btn" data-quiz="Quest5">Play now</button></a>
                 </div>
                 <div class="quiz">
                     <img src="images/px1.jpg" alt="">
                     <h1>JS Advanced</h1>
                     <h3 class="Deficile">Niveau : Deficile</h3>
                     <p>duree : 1min</p>
-                    <a href="quiz.html"><button class="btn">Play now</button></a>
+                    <a href="quiz.html"><button class="btn" data-quiz="Quest6">Play now</button></a>
                 </div>
                 <div class="quiz">
                     <img src="images/px1.jpg" alt="">
                     <h1>bootstrap</h1>
                     <h3 class="Facile">Niveau : Facile</h3>
                     <p>duree : 1min</p>
-                    <a href="quiz.html"><button class="btn">Play now</button></a>
+                    <a href="quiz.html"><button class="btn" data-quiz="Quest7">Play now</button></a>
                 </div>
             </div>
         </section>
+        <section class="quiz1">
+            <div class="quizes" id="quiz-container">
+                
+            </div>
+        </section>
     </main>
+    <script src="quiz.js"></script>
 </body>
 </html>
