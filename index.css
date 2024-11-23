@@ -49,7 +49,9 @@ ul li:hover {
 }
 
 .quiz {
-    border: blue 1px solid;
+    border: .6px solid #00e6e6;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    transition: box-shadow 0.3s ease;
     line-height: 35px;
     display: flex;
     flex-direction: column;
@@ -62,17 +64,23 @@ ul li:hover {
     border-radius: 4px;
     height: 180px;
 }
-
 button {
-    border: 1px solid rgb(255, 74, 74);
-    background-color: #ffe3f9;
-    color: black;
-    width: 100px;
-    height: 30px;
-    font-size: 15px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border-radius: 5px;
+    background: linear-gradient(135deg, #00b3b3, #00e6e6);
+    color: white;
+    width: 90px;
+    height: 35px;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
 }
 
 .quizes {
@@ -83,50 +91,88 @@ button {
 .quiz1 {
     margin: 50px 0;
 }
+.admin{
+    display: flex;
+    justify-content: space-between;
+}
 
 .admp {
     width: 200px;
     height: 150px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    margin-left: 1300px;
     line-height: 50px;
     border-radius: 15px;
-    display: none;
+
+    /* Transition Effect */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.admp.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
 .admp h3 {
     padding-top: 8%;
     margin-left: 20%;
     color: cadetblue;
-    transition: 1s;
+    transition: transform 0.3s ease, color 0.3s ease;
     cursor: pointer;
 }
-.admp h3:hover{
-    scale: 1.1;
+
+.admp h3:hover {
+    transform: scale(1.1);
 }
+.fix {
+    margin: auto;
+}
+.fix h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
 
 .btn {
     transition: 0.4s;
     margin: 10px;
 }
 
-.btn:hover {
-    scale: 1.1;
-    color: red;
-    border: red 1px solid;
-}
 
 .Facile {
-    color: rgb(0, 226, 8);
+    color: #00e600; /* Brighter green */
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.Facile:hover {
+    color: #00b300;
+    transform: scale(1.1);
 }
 
 .moyenne {
-    color: rgb(255, 90, 30);
+    color: #ff5733; /* Soft orange */
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.moyenne:hover {
+    color: #e64a19;
+    transform: scale(1.1);
 }
 
 .Deficile {
-    color: red;
+    color: #e60000; /* Intense red */
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
+
+.Deficile:hover {
+    color: #b30000;
+    transform: scale(1.1);
+}
+
 
 @media (max-width: 768px) {
     .navb {

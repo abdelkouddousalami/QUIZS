@@ -35,9 +35,9 @@ const Quest = [
         question: "What does the `<meta charset='UTF-8'>` tag do?",
         answers: [
             { text: "Links to a CSS file", correct: false, feedback: "Linking to CSS requires the `<link>` tag." },
-            { text: "Defines the document's language", correct: false, feedback: "Defining the language uses `lang` on the `<html>` tag." },
+            { text: "Defines the document's", correct: false, feedback: "Defining the language uses `lang` on the `<html>` tag." },
             { text: "Creates a responsive layout", correct: false, feedback: "Responsiveness is managed through CSS and `<meta viewport>`." },
-            { text: "Specifies the document's character encoding", correct: true }
+            { text: "Specifies the document's", correct: true }
         ]
     }
 ];
@@ -381,12 +381,15 @@ const Quest7 = [
 let dash = document.querySelector('.admp');
 
 function view() {
-    dash.style.display = 'block';
+    dash.classList.add('visible');
+    
 }
 
 function remv() {
-    dash.style.display = 'none';
+    dash.classList.remove('visible');
+   
 }
+
 
 let currentQuestionIndex = JSON.parse(localStorage.getItem("currentQuestionIndex")) || 0;
 let score = JSON.parse(localStorage.getItem("score")) || 0;
@@ -514,24 +517,33 @@ function validateTextAnswer(userInput, correctAnswer) {
 showQuestion();
 
 document.addEventListener('DOMContentLoaded', function () {
-    const quizzes = JSON.parse(localStorage.getItem('quizzes')) || [];
-
     const quizContainer = document.getElementById('quiz-container');
 
-    if (quizzes.length > 0) {
-        quizzes.forEach(quiz => {
-            const quizCard = document.createElement('div');
-            quizCard.classList.add('quiz');
-            quizCard.innerHTML = `
-                <img src="images/px1.jpg" alt="Quiz Image">
-                <h1>${quiz.title}</h1>
-                <h3 class="${quiz.difficulty}">Niveau : ${quiz.difficulty.charAt(0).toUpperCase() + quiz.difficulty.slice(1)}</h3>
-                <p>Duree : ${quiz.timePerQuestion} sec/question</p>
-                <a href="quiz.html"><button class="btn" data-quiz-id="${quiz.id}">Play now</button></a>
-            `;
-            quizContainer.appendChild(quizCard);
-        });
-    } else {
-        quizContainer.innerHTML = '<p>Aucun quiz disponible. Ajoutez-en via l\'administrateur.</p>';
+    // Load questions from localStorage or initialize an empty array
+    const questions = JSON.parse(localStorage.getItem('Quest')) || [];
+    console.log('Loaded questions from localStorage:', questions);
+
+    if (!questions || questions.length === 0) {
+        quizContainer.innerHTML = '<p>No quizzes available. Please add quizzes through the admin page.</p>';
+        return;
     }
+
+    questions.forEach((quiz, index) => {
+        console.log(`Processing quiz ${index + 1}:`, quiz);
+
+        const quizCard = document.createElement('div');
+        quizCard.classList.add('quiz');
+        quizCard.innerHTML = `
+            <img src="images/px1.jpg" alt="Quiz Image">
+            <h1>Quiz ${index + 1}</h1>
+            <h3>${quiz.question}</h3>
+            <button class="btn" onclick="startQuiz(${index})">Play Now</button>
+        `;
+        quizContainer.appendChild(quizCard);
+    });
 });
+
+function startQuiz(index) {
+    localStorage.setItem('currentQuiz', index);
+    window.location.href = 'quiz.html';
+}

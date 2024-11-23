@@ -1,25 +1,24 @@
-
-main{
+main {
     display: flex;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
 }
-.Home{
+
+.Home {
     color: white;
 }
-.firstquiz{
+
+.firstquiz {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 20px;
     width: 800px;
     margin: auto;
     border-radius: 5px;
-    margin-top: 20px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
-.listans li{
+.listans li {
     display: flex;
     line-height: 30px;
     height: 40px;
@@ -28,41 +27,42 @@ main{
     width: 320px;
     border-radius: 5px;
     margin-bottom: 20px;
-    
 }
-li span{
+
+li span {
     border: rgb(77, 77, 237) 1px solid;
-    background-color:rgb(101, 101, 253) ;
+    background-color: rgb(101, 101, 253);
     width: 50px;
     text-align: center;
     border-radius: 5px;
-    
 }
-.listans li p{
+
+.listans li p {
     margin: auto;
 }
-.qus img{
+
+.qus img {
     width: 400px;
     border-radius: 5px;
     margin-top: 10px;
 }
-.scr{
+
+.scr {
     width: 400px;
     margin: auto;
     height: 400px;
     border-radius: 10px;
 }
-.prt{
+
+.prt {
     width: 350px;
     height: 10px;
     border-radius: 5px;
     background-color: #f5f5f5;
-    border: gray .5px solid;
-    animation-name: x;
-    animation-duration: 60s;
-    animation-delay: .5s;
-
+    border: gray 0.5px solid;
+    animation: x 60s 0.5s forwards;
 }
+
 #progress-container {
     width: 100%;
     background-color: #e0e0e0;
@@ -78,62 +78,70 @@ li span{
     transition: width 0.5s ease;
 }
 
-@keyframes x{
-    0%{
+@keyframes x {
+    0% {
         background-color: green;
         width: 0%;
     }
-    60%{
+    60% {
         background-color: orange;
         width: 60%;
     }
-    100%{
+    100% {
         background-color: red;
         width: 100%;
     }
 }
-.tim{
+
+.tim {
     width: 200px;
     height: 10px;
     border-radius: 5px;
     background-color: greenyellow;
 }
-.scr{
+
+.scr {
     line-height: 50px;
 }
-.scr div .sd{
+
+.scr div .sd {
     margin-left: 60px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
     font-size: 18px;
     color: rgb(255, 168, 7);
-    
 }
-.info h1{
+
+.info h1 {
     margin-left: 50px;
 }
-.info p{
+
+.info p {
     width: 250px;
     line-height: 20px;
     margin: auto;
 }
-.btn2{
+
+.btn2 {
     margin-top: 35px;
     margin-left: 150px;
     background-color: rgb(55, 55, 255);
     color: white;
     border: white 1px solid;
-    transition: .4s;
+    transition: 0.4s;
 }
-.btn2:hover{
+
+.btn2:hover {
     scale: 1.1;
     background-color: blue;
 }
-.nmb{
+
+.nmb {
     display: flex;
     justify-content: space-evenly;
     background-color: rgb(69, 69, 248);
     border-radius: 10px;
 }
+
 .correct {
     background-color: green;
     color: white;
@@ -153,12 +161,15 @@ li span{
     background-color: #f0f0f0;
     scale: 1.1;
 }
-.answrs{
-    transition: .4s;
+
+.answrs {
+    transition: 0.4s;
 }
-.answrs:hover{
+
+.answrs:hover {
     scale: 1.1;
 }
+
 /* Tablet view */
 @media (max-width: 768px) {
     main {

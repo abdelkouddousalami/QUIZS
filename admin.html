@@ -28,34 +28,25 @@
     <h1>Gestion des Quiz</h1>
     
     <h2 id="question-form-title">Ajouter des Questions</h2>
-<form id="question-form">
-  <label for="question-text">Question</label>
-  <input type="text" id="question-text" name="question-text" required>
 
-  <label for="question-type">Type de Question</label>
-  <select id="question-type" name="question-type" required>
-    <option value="multiple-choice">Choix Multiple</option>
-    <option value="true-false">Vrai/Faux</option>
-    <option value="text">Texte</option>
-  </select>
-
-  <div id="options-container">
-    <label for="option-1">Option 1</label>
-    <input type="text" id="option-1" name="option-1">
-    <label for="option-2">Option 2</label>
-    <input type="text" id="option-2" name="option-2">
-    <label for="option-3">Option 3</label>
-    <input type="text" id="option-3" name="option-3">
-    <label for="option-4">Option 4</label>
-    <input type="text" id="option-4" name="option-4">
-  </div>
-
-  <label for="correct-answer">Réponse Correcte</label>
-  <input type="text" id="correct-answer" name="correct-answer" required>
-
-  <button type="submit">Ajouter Question</button>
-</form>
-
+    <main>
+      <form id="add-question-form">
+          <div>
+              <label for="question">Question:</label>
+              <textarea id="question" required></textarea>
+          </div>
+          <div id="answers-container">
+              <h3>Answers</h3>
+              <div class="answer">
+                  <input type="text" placeholder="Answer text" class="answer-text" required>
+                  <input type="checkbox" class="answer-correct"> Correct
+                  <input type="text" placeholder="Feedback (optional)" class="answer-feedback">
+              </div>
+          </div>
+          <button type="button" id="add-answer">Add Another Answer</button>
+          <button type="submit">Save Question</button>
+      </form>
+  </main>
   </div>
 
   <script src="admin.js"></script>
